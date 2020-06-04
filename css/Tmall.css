@@ -1,0 +1,79 @@
+
+/*header  开始*/
+#header{
+    position: relative;
+    background: #f2f2f2;
+    border-bottom:2px solid #e4e4e4;
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+
+
+}
+
+
+#login-info{
+    float: left;
+}
+#quick-menu{
+    float: right;
+}
+#quick-menu .menu{
+    float:left;
+    position: relative;
+    padding:0 14px;
+}
+#header a,#login-info span{
+    color: #999;
+}
+
+
+#login-info a{
+   padding:0 14px;
+}
+
+#header a:hover{
+    color:#FF0036;
+}
+#login-info .register{
+    padding: 0px;
+}
+
+#header .triangle::after{/*伪元素选择器: 小三角*/
+    content: '';
+    border-width: 4px;
+    border-style: solid;
+    border-top-color: #999999;
+    border-bottom-color:transparent ;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    width: 0;
+    position:absolute;
+    right: 2px;
+    top:50%;
+    margin-top: -1px;
+    transition: none;
+    transform-origin:3px 1.5px ;/*图形变化的原点*/
+
+
+}
+#header .icon-gouwuchekong{
+    font-size: 12px;
+}
+#header .triangle:hover::after{
+    transform: rotate(180deg);/*变化元素*/
+
+    /*linener匀速*/
+    transition: transform .3s ease;/*要变型的属性：transform + 0.3s过度时间+ 先快后慢*/
+
+}
+#header .triangle{
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 1px 0 1px;
+}
+
+#header .triangle:hover{
+    background: #ffffff;
+}
+/*header 结束*/
