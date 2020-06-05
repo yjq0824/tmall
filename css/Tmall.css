@@ -22,6 +22,8 @@
     float:left;
     position: relative;
     padding:0 14px;
+    height: 35px;
+
 }
 #header a,#login-info span{
     color: #999;
@@ -59,6 +61,7 @@
 }
 #header .icon-gouwuchekong{
     font-size: 12px;
+    color: #FF0036;
 }
 #header .triangle:hover::after{
     transform: rotate(180deg);/*变化元素*/
@@ -73,7 +76,208 @@
     border-width: 0 1px 0 1px;
 }
 
+
+
 #header .triangle:hover{
     background: #ffffff;
+    border-color:#e5e5e5;
+    cursor: pointer;
+}
+#header .triangle:hover > a{
+    text-decoration: underline;
+    color: #FF0036;
+}
+
+#header .triangle:hover .submenu{
+    display: block;
+}
+#quick-menu .submenu a:hover{
+    text-decoration: underline;
+}
+#quick-menu .submenu{
+    position: absolute;
+    top: 32px;
+    left:-1px ;
+    width: 74px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    border-top-color:transparent ;
+    padding: 0 14px;
+    display: none;
+    background: #ffffff;
+}
+
+#quick-menu .split{
+    width: 1px;
+    height: 14px;
+    background:#ccc;
+    padding: 0;
+    margin: 9px 5px;
+}
+#quick-menu .qr-code{
+    width: 175px;
+    height: 227px;
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+    position: absolute;
+    top:28px;
+    left: -50px;
+    display: none;
+
+    /*阴影 水平距离 垂直距离 外延值 模糊值（非必须） 颜色*/
+    box-shadow: 0 0 5px #aaa;
+}
+#quick-menu .qr-code::after{
+    content: '';
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #f00 transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    left: 78px;
+}
+#quick-menu .moblie:hover .qr-code{
+    display: block;
 }
 /*header 结束*/
+
+
+
+
+
+
+
+
+
+/*logo-search开始*/
+#logo-search{
+    height:100px ;
+}
+#logo,#search{
+    float: left;
+}
+
+
+#logo img{
+    width: 240px;
+}
+#logo{
+    margin-top:40px ;
+    margin-left: -100px;
+
+}
+#search{
+    margin-top: 38px;
+    margin-left:120px ;
+}
+#search .search-ipt{
+    margin-left: 2px;
+    width: 483px;
+    height: 26px;
+    border: none;
+    padding: 4px 3px 0 0;
+    /*去掉焦点线*/
+    outline: none;
+    /*文本缩进*/
+    text-indent: 10px;
+
+}
+
+
+#search .search-box{
+    border:2px solid #ff0036;
+    height: 36px;
+}
+#search .search-btn{
+    width: 132px;
+    height: 36px;
+    border: none;
+    background: #FF0036;
+    color: #ffffff;
+    font-size: 18px;
+    float: right;
+}
+#search .hot{
+    float: left;
+    border-right:1px solid #ccc ;
+    padding: 0 12px;
+    height: 15px;
+    line-height: 15px;
+}
+#search .hot a{
+    color: #999;
+    font-size: 12px;
+}
+#search .hot-query{
+    margin-top: 5px;
+}
+#search .hot-query-highlight a{
+    color: #ff0036;
+
+}
+#search .last{
+    border-right: none;
+}
+
+
+/*logo-search结束*/
+
+
+
+
+
+
+
+
+/*main-nav开始*/
+#main-nav .nav{
+    margin-top: 40px;
+    margin-left: 200px;
+    height: 35px;
+}
+#main-nav .nav li{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    margin-right:15px ;
+}
+
+#main-nav .nav-img{
+    width: 100px;
+}
+#main-nav .nav a:hover{
+    color: #ff0036;
+}
+#banner .wrapper {
+    height: 500px;
+    background:url("../images/background.jpg");
+    position: relative;
+
+}
+#banner .category-type{
+    width: 200px;
+    height: 536px;
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    top: -36px;
+
+}
+#banner .category-type i,span{
+    color: #fff;
+}
+#banner .category-type li{
+    height: 36px;
+    padding-left: 10px;
+    line-height: 36px;
+
+}
+#banner{
+    background-color:#e8e8e8 ;
+    background-position: center;
+}
+#banner .product-type{
+    background-color: #ff0036;
+}
+/*main-nav结束*/
